@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,14 @@
 </head>
 <body>
     <header><h1><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/LEGO_logo.svg/1024px-LEGO_logo.svg.png" alt="logo" width="50px" height="50px"> PERIODICOATOPE</h1></header>
+    <nav>
+        <ol>
+            <li><a href="./index_practica.html">Home</a></li>
+            <li><a href="./resumen-semanal.html#parteprincipal">Resumen Semanal</a></li>
+            <li><a href="./resumen-semanal.html#otras">Otras</a></li>
+            <li><a href="#formulario">formulario</a></li>
+        </ol>
+    </nav>
         <main>
             <section id="animales"><h2>ANIMALES</h2>
                 <section id="primera-section">
@@ -69,17 +77,34 @@
                 </section>
             </section>
         </main>
-    <footer>
-        <span>@ELPAIS</span>
-        <div>
-            <img src="https://www.lowi.es/blog/wp-content/uploads/2023/10/twitter-X-1000x625.jpeg" alt="logo-aplicacion1" url="https://x.com/?lang=es" width="35px" height="30px">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1022px-WhatsApp.svg.png" width="35px" height="30px" alt="logo-aplicacion2">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/YouTube_social_white_square_%282017%29.svg/1200px-YouTube_social_white_square_%282017%29.svg.png" alt="logo-aplicacion3" width="35px" height="30px" >
-            
-        </div>
-        <p><i>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non eligendi recusandae quidem alias soluta!</i></p>
 
-    </footer>
+        <section id="formulario">
+            <header><h1>Formulario</h1></header>
+        <form action="./formulario.html" >
+           <label for="nombre">Nombre: </label>
+            <input type="text" name="nombre" placeholder="Ingresa tu nombre:.."><br/>
+            <label for="apellido">Apellidos: </label>
+            <input type="text" name="apellido" placeholder="Ingresa tu apellido:.."><br/>
+            <label for="edad">Edad: </label>
+            <input type="number" name="edad" placeholder="Ingresa tu edad:.."><br/>
+            <label for="comment">Commenta...</label>
+            <textarea name="comment" id="comment"placeholder="Escribenos algun detalle"></textarea>
+            
+        </form>
+    </section>
+
+
+        <footer>
+            <span>@ELPAIS</span>
+            <div>
+                <img src="https://www.lowi.es/blog/wp-content/uploads/2023/10/twitter-X-1000x625.jpeg" alt="logo-aplicacion1" url="https://x.com/?lang=es" width="35px" height="30px">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1022px-WhatsApp.svg.png" width="35px" height="30px" alt="logo-aplicacion2">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/YouTube_social_white_square_%282017%29.svg/1200px-YouTube_social_white_square_%282017%29.svg.png" alt="logo-aplicacion3" width="35px" height="30px" >
+                
+            </div>
+            <p><i>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non eligendi recusandae quidem alias soluta!</i></p>
+    
+        </footer>
 
 </body>
 </html>
