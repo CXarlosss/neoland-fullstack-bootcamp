@@ -226,6 +226,13 @@ fieldset{
     width: 50%;
     background:#fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 300ms ease-in-out;
+    scale: 0.9;
+}
+fieldset:hover{
+    background-color: #cbd9f5;
+    scale: 1;
+    margin:1rem;
 }
 legend{
     font-size: 1.2;
