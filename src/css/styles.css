@@ -1,0 +1,295 @@
+/* Estilos generales */
+body,section,h1,h2,h3,h4,h5,h6,img,div,header,nav{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: rgb(130,255,245);
+background: linear-gradient(180deg, rgba(130,255,245,0.21612394957983194) 0%, rgba(255,255,255,0.5718662464985995) 100%);
+}
+header.titulo-periodico {
+    background-color: #ccc3c3;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+}
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    transition: filter 0.3s ease;
+    cursor: pointer;
+    
+}
+nav:hover {
+    background:linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+}
+nav ol {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    
+}
+
+nav ol li a {
+    color: white;
+    text-decoration: none;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+
+}
+nav ol li a:hover{
+    scale:1.3em;
+    color: rgb(42, 202, 207);
+}
+main {
+    padding: 20px;
+}
+h2{
+    margin-bottom: 5px;
+    text-decoration: underline;
+}
+.container{
+    padding:auto ;
+    margin: auto;
+}
+section#animales {
+    margin-bottom: 20px;
+    text-align: center;
+}
+/*Primera Section*/
+.primera-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border: 1px solid gray;
+}
+.primera-section header {
+    margin-top: 5%;
+    margin-right: 2.5%;
+    margin-left: 2.5%;
+    border: 0;
+}
+.primera-section h1 {
+    margin-top: 5%;
+    margin-bottom: 10px;
+}
+.primera-section h4{
+    margin-top: 5%;
+}
+.primera-section p {
+margin-top: 5%;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+.primera-section img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover; 
+}
+textarea {
+    display: block;
+    margin-top: 10px;
+    /* width: 100%; */
+    max-width: 600px;
+    height: 50px;
+}
+/*Segunda Seccion*/
+.segunda-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border: 1px solid black;
+}
+.segunda-section header {
+    margin-top: 5%;
+    margin-right: 2.5%;
+    margin-left: 2.5%;
+    border: 0;
+}
+.segunda-section h1 {
+    margin-top: 5%;
+    margin-bottom: 10px;
+}
+.segunda-section h4{
+    margin-top: 5%;
+}
+.segunda-section p {
+    margin-top: 5%;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+.segunda-section img {
+    
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin: 5px;
+}
+section#monumentos {
+    margin-bottom: 20px;
+    text-align: center;
+}
+/*Tercera Seccion*/
+.tercera-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border: 1px solid black;
+}
+.tercera-section header {
+    margin-top: 5%;
+    margin-right: 2.5%;
+    margin-left: 2.5%;
+    border: 0;
+}
+.tercera-section h1 {
+    margin-top: 5%;
+    margin-bottom: 10px;
+}
+.tercera-section h4{
+    margin-top: 5%;
+}
+.tercera-section p {
+    margin-top: 5%;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+.tercera-section img {
+    
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin: 5px;
+}
+/*Cuarta Seccion*/
+.cuarta-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border: 1px solid black;
+}
+.cuarta-section header {
+    margin-top: 5%;
+    margin-right: 2.5%;
+    margin-left: 2.5%;
+    border: 0;
+}
+.cuarta-section h1 {
+    margin-top: 5%;
+    margin-bottom: 10px;
+}
+.cuarta-section h4{
+    margin-top: 5%;
+}
+.cuarta-section p {
+    margin-top: 5%; 
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+.cuarta-section img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    
+
+}
+
+/*Formulario*/
+
+#formulario{
+    text-align: center; 
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-content{
+    display: flex;
+    justify-content:center;
+    gap: 0%;
+    margin-bottom: 20px;
+    width: 100%;
+
+}
+fieldset{
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    width: 50%;
+    background:#fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+legend{
+    font-size: 1.2;
+    font-weight: bold;
+}
+label{
+    display: block;
+    margin-top: 10px ;
+    font-weight: bold;
+}
+input,select{
+    width: 70%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    
+}
+ .textarea{
+    width: 70%;
+    padding: 8px;
+    margin-left: 50px;
+}
+button {
+    padding: 13px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    filter: grayscale(100%);
+    transition: all 0.5s ease ease-in-out;
+    cursor: pointer;
+    margin-bottom: 5px;
+    
+}
+ button:hover {
+    filter: grayscale(0%);
+    scale: 1.1;
+}
+/*Footer*/  
+footer{
+    background-color: #333;
+    color:#fff;
+    padding:20px 0 ;
+    text-align: center;
+    font-size: 1rem;
+}
+footer span{
+    font-weight: bold;
+    font-size: 1.2;
+    
+}
+footer div{
+    margin: 15px 0;
+}
+footer div img{
+    margin:0 10px;
+    border-radius: 5px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+    cursor: pointer;
+}
+footer div img:hover{
+    filter: grayscale(0%);
+    scale: 1.1;
+}
