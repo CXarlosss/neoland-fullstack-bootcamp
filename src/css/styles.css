@@ -1,31 +1,27 @@
+/*Estilos animaciones*/
+
+
 /* Estilos generales */
 body,section,h1,h2,h3,h4,h5,h6,img,div,header,nav{
     margin: 0;
     padding: 0;
 }
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: rgb(130,255,245);
-background: linear-gradient(180deg, rgba(130,255,245,0.21612394957983194) 0%, rgba(255,255,255,0.5718662464985995) 100%);
-}
 header.titulo-periodico {
-    background-color: #ccc3c3;
+    background:url(https://media.istockphoto.com/id/182054985/es/foto/fondo-de-fibra-de-carbono.jpg?s=612x612&w=0&k=20&c=CkKU8OTNQCbJ-RZOEXsEG814IXatnnbRIR8bZfhr_P4=);
+    background-repeat:no-repeat;
+    background-size: cover;
     padding: 10px;
     text-align: center;
     color: #fff;
-}
+} 
 nav {
     background-color: #333;
     color: white;
     padding: 10px;
-    transition: filter 0.3s ease;
     cursor: pointer;
-    
 }
 nav:hover {
-    background:linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
 }
 nav ol {
     list-style: none;
@@ -34,7 +30,6 @@ nav ol {
     gap: 20px;
     padding: 0;
     margin: 0;
-    
 }
 
 nav ol li a {
@@ -42,34 +37,94 @@ nav ol li a {
     text-decoration: none;
     transition: all 300ms ease-in-out;
     cursor: pointer;
-
 }
-nav ol li a:hover{
-    scale:1.3em;
+
+nav ol li a:hover {
+   
     color: rgb(42, 202, 207);
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background:url(https://media.istockphoto.com/id/479612364/es/foto/papel-en-blanco-textura-o-fondo.jpg?s=612x612&w=0&k=20&c=AE4YxtpYyU_xp2yYUTXyDjsAXmjMZArBLgcPe0B20Lo=);
+
 }
 main {
     padding: 20px;
 }
-h2{
-    margin-bottom: 5px;
+h2 {
+
+    margin-bottom: 2px;
     text-decoration: underline;
+    display: inline-block;
+    margin: 10px 0.2rem;
+    animation: bounce; 
+    animation-duration: 2s;
 }
+
 .container{
-    padding:auto ;
+    padding:auto;
     margin: auto;
 }
 section#animales {
     margin-bottom: 20px;
     text-align: center;
 }
+/*Haciendo las secciones todas juntas para que cuando pase el raton se hagan grandes*/
+.primera-section,
+.segunda-section,
+.tercera-section,
+.cuarta-section {
+    transition: all 1s ease-in-out;
+    scale: 0.9;
+}
+
+.primera-section:hover,
+.segunda-section:hover,
+.tercera-section:hover,
+.cuarta-section:hover {
+    scale: 0.92;
+}
+
+.primera-section img,
+.segunda-section img,
+.tercera-section img,
+.cuarta-section img {
+    border-radius: 10px;
+    filter: grayscale(100%);
+    scale: 0.9;
+    transition: all 1s ease-in-out;
+}
+
+
+.primera-section:hover img,
+.segunda-section:hover img,
+.tercera-section:hover img,
+.cuarta-section:hover img {
+    filter: grayscale(0%);
+    transform: scale(0.9) translateY(-5px);
+}
+
+.primera-section h1,
+.segunda-section h2,
+.tercera-section h3,
+.cuarta-section h4 {
+    text-decoration: underline;
+    text-transform: capitalize;
+    color: #182848;
+}
+
+
 /*Primera Section*/
 .primera-section {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     border: 1px solid gray;
+   
 }
+
 .primera-section header {
     margin-top: 5%;
     margin-right: 2.5%;
@@ -92,11 +147,12 @@ margin-top: 5%;
     width: 300px;
     height: 300px;
     object-fit: cover; 
+    
 }
 textarea {
     display: block;
     margin-top: 10px;
-    /* width: 100%; */
+    
     max-width: 600px;
     height: 50px;
 }
@@ -221,19 +277,26 @@ form{
 }
 fieldset{
     border: 1px solid #ccc;
+    background:url(https://img.freepik.com/foto-gratis/vista-superior-viejos-periodicos-franceses_23-2149318857.jpg);
     padding: 15px;
     border-radius: 5px;
     width: 50%;
-    background:#fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: all 300ms ease-in-out;
+    
+    opacity: 40%;
+    box-shadow: 0 2px 5px rgba(179, 105, 44, 0.1);
+    transition: all 1s ease-in-out; 
     scale: 0.9;
 }
 fieldset:hover{
-    background-color: #cbd9f5;
-    scale: 1;
-    margin:1rem;
+    
+    opacity: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    scale: 0.95;
+   
 }
+
+
 legend{
     font-size: 1.2;
     font-weight: bold;
@@ -252,21 +315,23 @@ input,select{
     
 }
  .textarea{
-    width: 70%;
+    width: 69%;
     padding: 8px;
     margin-left: 50px;
 }
 button {
     padding: 13px 20px;
     font-size: 1rem;
+     margin-bottom: 5px;
+     margin-left: 10px;
     color: #fff;
-    background-color: #007BFF;
+    background-color: #3b75c0;
     border: none;
     border-radius: 5px;
     filter: grayscale(100%);
-    transition: all 0.5s ease ease-in-out;
+    transition: all 1s ease ease-in-out;
     cursor: pointer;
-    margin-bottom: 5px;
+   
     
 }
  button:hover {
@@ -290,13 +355,24 @@ footer div{
     margin: 15px 0;
 }
 footer div img{
+    width: 50px;
+    height: 50px;
     margin:0 10px;
     border-radius: 5px;
     filter: grayscale(100%);
-    transition: filter 0.3s ease;
+    transition: all 3s ease ease-in-out;
     cursor: pointer;
 }
+
 footer div img:hover{
     filter: grayscale(0%);
-    scale: 1.1;
+    scale: 1;
+}
+footer div img:nth-child(1):hover {
+    
+    content: url(https://cdn-icons-png.flaticon.com/128/2582/2582527.png); 
+}
+footer div img:nth-child(2):hover {
+    
+    content: url(https://cdn-icons-png.flaticon.com/128/174/174879.png); 
 }

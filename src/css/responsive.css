@@ -24,7 +24,9 @@
         width: 90%;
     }
     input,select,textarea{
-        width: 100%;
+        width: 90%;
+        display: block;
+        margin-left: 5%;
     }
 }
 @media(max-width:1024px){
@@ -43,7 +45,7 @@
         width: 40%;
     }
     textarea{
-        display: none;
+        display: block;
     }
 fieldset{
     width: 70%;
