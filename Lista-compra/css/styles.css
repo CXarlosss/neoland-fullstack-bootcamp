@@ -1,0 +1,123 @@
+
+/* Aqui vamos a colocar los estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    background-color: #f4f4f9;
+}
+
+/* Estilo para la sección superior */
+.top-section {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estilo para el contenedor de las secciones inferiores */
+.bottom-section {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    gap: 1rem;
+}
+#shopping-form{
+    display: block;
+    flex:wrap;
+    gap: 10px;
+    align-items: center;
+}
+#shopping-form label,#shopping-form input{
+    display: inline-block;
+    margin: 5px 0;
+}
+ #shopping-form label{
+    min-width: 80px;
+    text-align:right;
+    margin-right: 10px;
+ }
+ #shopping-form input{
+    flex:1;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+ }
+ .form-buttons,button {
+    display: flex;
+    justify-content: center;
+
+    gap: 10px;
+    margin-top: 10px;
+    width: 100%;
+ }
+ .form-buttons button,button{
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+ }
+ .form-buttons button:hover,button:hover{
+    background-color: #45a049;
+ }
+/* Sección izquierda (65%) */
+.left-section {
+    flex: 65%; 
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+.data-table {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+}
+.data-table th, .data-table td{
+    border: 1px solid #ddd;
+    padding: 10px ;
+    text-align: left;
+}
+/* Sección derecha (35%) */
+.right-section {
+    flex: 35%; 
+    background-color: #e9ecef;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+.menu{
+    list-style: none;
+    padding: 0;
+}
+.menu li{
+    margin: 10px 0;
+}
+.menu li a{
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
+    padding: 10px;
+    display: block;
+    border: 1px solid #4CAF50;
+    border-radius:5px;
+}
+.menu li a:hover{
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+
+

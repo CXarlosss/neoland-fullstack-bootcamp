@@ -1,0 +1,20 @@
+body{
+    font-size: 0.9rem;
+   
+    
+}
+#shopping-form input{
+    font-size: 0.85rem;
+}
+
+.form-buttons{
+    padding: 8px 15px;
+    font-size: 0.9rem;
+}
+.button-section{
+    gap: 0;
+}
+.data-table th, .data-table td{
+    padding: 8px;
+    font-size: 0.85rem;
+}

@@ -1,0 +1,32 @@
+1 Guardar articulo de la compra en una lista:
+
+SET shoppingList = [fruta,pesacado,carne]
+SET newArticle = INPUT "dame el nombre del nuevo articulo"
+SET shoppingList = shoppingList + newArticle
+PRINT shoppingList
+
+2 Calcular el total de la lista de la compra
+2.1 Declarar el total de la compra
+2.2 Recirrer la lista de la compra
+2.3 Por cada elemento de la lista:
+   2.3.1 Obtener su precio
+   2.3.2 Añadir el precio a su total
+2.4 Mostrar el total calculado
+
+/*Opcion 1*/
+SET totalAmount = 0
+FOR shoppingListItem 
+   SET shoppingListItem = GET(shoppingList)
+   SET totalAmount = CALCULATE(totalAmount ,shoppingListItem)
+   READ_NEXT_ITEM
+PRINT totalAmount
+
+/*Opcion 2*/
+SET index = 1
+while(index<shoppingList.length)
+   SET shoppingListItem = shoppingList[index]
+   SET totalAmount = CALCULATE(totalAmount,shoppingListItem)
+   SET index = index + 1 
+
+3 Crear una nueva lista de compra
+SET shoppingList = []
