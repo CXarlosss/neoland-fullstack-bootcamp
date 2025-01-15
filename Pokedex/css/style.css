@@ -1,0 +1,120 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    background-color: aliceblue;
+
+}
+.top-section{
+    width: 100%;
+    background-color: #429145;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    
+}
+
+.menu{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.menu li{
+    margin: 10px 0;
+}
+.menu li a{
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: bold;
+    padding: 10px;
+   display: block;
+   text-decoration: underline;
+   transition: all 300ms ease-in-out;
+
+}
+.menu li a:hover{
+    background-color: #609965;
+    color: rgb(0, 0, 0);
+    scale: 1.1;
+    text-decoration: underline  #121312;
+}
+
+.header-section{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+    gap: 1rem;
+    
+}
+
+#pokemon-form{
+    display: block;
+    flex:wrap;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+}
+#pokemon-form label,#pokemon-form input{
+    display: inline-block;
+}
+#pokemon-form label{
+    min-width: 80px;
+    text-align: right;
+    margin-right: 10px;
+}
+#pokemon-form input{
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.form-buttons,button{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    width: 100%;
+}
+.form-buttons button, button{
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    
+    color: white;
+    border: none;
+   
+    cursor: pointer;
+    transition: all 300ms  ease-in-out;
+}
+.form-buttons button:hover,button:hover{
+    border-radius: 10px;
+    background-color: #358d38;
+    
+    
+}
+
+/* Tabla */
+.data-table{
+    display: none;
+    margin-top: 30px;
+    width: 100%;
+    border-collapse: collapse;
+
+}
+.data-table th, .data-table td{
+    border:  1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+

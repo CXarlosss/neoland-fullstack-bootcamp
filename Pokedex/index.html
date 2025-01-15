@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de la compra</title>
+    <link rel="stylesheet" href="./css/style.css"> 
+    <link rel="stylesheet" href="./css/responsive.css" media="screen and (max-width: 768px)">
+    
+</head>
+<body>
+    <section class="top-section">
+        <!-- Sección grande de arriba -->
+        
+            <h3>Pokemon</h3>
+            <ul class="menu">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Ver historial</a></li>
+                <li><a href="#">Configuración</a></li>
+                <li><a href="#">Ayuda</a></li>
+            </ul>
+        
+        
+    </section>
+    <section class="header-section">
+        <form id="pokemon-form">
+            <label for="pokemon-name">Pokemon:</label>
+            <input type="text" id="pokemon-name" placeholder="Pokemon.." required>
+            <br><br>
+            
+            
+            
+            <div class="form-buttons">
+                <button id="add-item" >Buscar el pokemon</button>
+                <button id="new-list" >Reset</button>
+            </div>
+        </form>
+    </section>
+    <table id="tabla-pokemon" class="data-table" style="display: none;"> 
+        <thead>
+            <tr>
+                <th>Nombre</th> 
+                <th>Imagen</th>
+                <th>Peso</th> 
+                <th>Altura</th>
+                <th>Borrar</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Las filas se añadirán dinámicamente aquí -->
+        </tbody>
+    </table>
+    </section>
+    <script src="scripts.js"></script>
+</body>
+</html>

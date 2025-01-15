@@ -154,3 +154,4 @@ function clearForm() {
   itemQuantityInput.value = ""; // Vaciamos el campo de la cantidad
   itemPricesInput.value = ""; // Vaciamos el campo del precio
 }
+  
