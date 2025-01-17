@@ -1,65 +1,32 @@
-/* //Definimos nuestra lista de la compra
-//Old Code do not Use!!
-//Var shoppingList = ['carne','pescado','fruta']
-//Text String
-let newArticle = 'flanes'
-//Number
-let totalAmount = 0
-//Arrays
-let shoppingList = ['carne','pescado','fruta']
-//Constants
-const PERAS = 'peras'
-//Objects
-let productInformation = {
-    qty:0,
-    name:'',
-    price:0
-}
-let shoppingListWithObjects = [
-    {
-        qty:1,
-        name:'carne',
-        price:10
-    },
-    {
-        qty:2,
-        name:'pescado',
-        price:20
-    },
-    {
-        qty:3,
-        name:'fruta',
-        price:5
-    }
-]
+// Inicializamos la lista de co mpra como un array vacío
+// Referencias a elementos del DOM para interactuar con ellos
+//Creamos campos nombre ,cantidad,precio,btones y cuerpo de la tabla y el total
+// Esperamos a que el DOM esté completamente cargado antes de ejecutar el código
+//Finalizamos el evento DOM
+      // Obtenemos los valores ingresados por el usuario en los campos
+      // Nombre del artículo, eliminando espacios al inicio y al final
+// Función para eliminar un artículo de la lista
+       //Eliminamos el artículo en la posición `index` del array `shoppingList`
+      // Actualizamos la tabla de la lista de compras
+// Función para actualizar la tabla con los artículos de la lista
+      // Recorremos cada artículo en la lista de compras
+      // Añadimos las celdas con los datos del artículo y un botón para eliminarlo
+// Función para calcular el total de la compra
+        //!!Importante inicializarla en 0
+        //  Recorremos cada artículo de la lista y sumamos su total
+        // Añadimos el total del artículo al total general
+        // Mostramos el total actualizado con 2 decimales
+// Evento para reiniciar la lista de compras
+        // Vaciamos la lista de compras
+        // Limpiamos la tabla
+        // Reseteamos el total a 0
+//Limpiamos los datos 
+        // Vaciamos el campo del nombre
+        // Vaciamos el campo de la cantidad
+        // Vaciamos el campo de la Precio
 
-console.log('Lista De la compra por Defector',shoppingList)
-//Console.info(shoppingList)
-//console.error(shoppingList)
-
-//Tomorrow
-function sayHello(){
-    console.log('Hello')
-}
-function sayHello2(){
-    console.log('Hello 2')
-}
-
-function addToShoppingList(){
-    let newArticle = document.getElementById('articulo').value;
-    shoppingList.push(newArticle)
-    console.log('addToShoppingList',shoppingList)
-}
-
-function resetShoppingList(){
-    shoppingList = []
-    console.log('resetShoppingList',shoppingList)
-} */
-/****************************************************************************************** */
-/****************************************************************************************** */
-/****************************************************************************************** */
-/****************************************************************************************** */
-/****************************************************************************************** */
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////METODO1////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Empezamos con el js
 
 // Inicializamos la lista de co mpra como un array vacío
@@ -91,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const newItem = {
         name: itemName, // Nombre del artículo
         quantity: itemQuantity, // Cantidad del artículo
-        price: itemPrice, // Precio por unidad
+        price: itemPrice, 
         total: itemQuantity * itemPrice, // Total del artículo (cantidad × precio)
       };
 
@@ -142,7 +109,7 @@ function calculateTotal() {
 }
 
 // Evento para reiniciar la lista de compras
-newListButton.addEventListener("click", function () {
+newListButton.addEventListener("click", function () { 
   shoppingList = []; // Vaciamos la lista de compras
   updateShoppingList(); // Limpiamos la tabla
   calculateTotal(); // Reseteamos el total a 0
@@ -153,5 +120,106 @@ function clearForm() {
   itemNameInput.value = ""; // Vaciamos el campo del nombre
   itemQuantityInput.value = ""; // Vaciamos el campo de la cantidad
   itemPricesInput.value = ""; // Vaciamos el campo del precio
+} 
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////NUEVOOOOMETODORGANIZADO//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/* 
+// Inicializamos la lista de compra como un array vacío
+let shoppingList = [];
+
+// EVENTOS DEL INTERFAZ
+//Esperamos a que el dom este completamente cargado antes de ejecutar codigo
+document.addEventListener("DOMContentLoaded", () => {
+  // Evento: Agregar artículo
+  document.getElementById("add-item").addEventListener("click", (event) => {
+    event.preventDefault();
+    const itemName = document.getElementById("item-name").value.trim();// Nombre del artículo, eliminando espacios al inicio y al final
+    const itemQuantity = parseFloat(document.getElementById("cantidad").value);//Convertimos la cantidad a numero
+    const itemPrice = parseFloat(document.getElementById("item-price").value);
+    //Convertimos la cantidad a numero
+//Validamos que los datos esten sean validos
+    if (itemName && !isNaN(itemQuantity) && !isNaN(itemPrice)) {
+      createItem(itemName, itemQuantity, itemPrice); // Llamamos al método para crear un artículo
+    } else {
+      alert("Por favor, ingresa todos los campos correctamente.");
+    }
+  });
+
+  // Evento: Reiniciar lista
+  document.getElementById("new-list").addEventListener("click", resetList);
+});
+
+// MÉTODOS DEL INTERFAZ
+// Crear un artículo y añadirlo a la lista de compras
+function createItem(name, quantity, price) {
+  const newItem = {
+    name,// Nombre del artículo
+    quantity,// Cantidad del artículo
+    price,// Precio por unidad
+    total: quantity * price,// Total del artículo (cantidad × precio)
+  };
+  shoppingList.push(newItem); // Añadimos el artículo al array `shoppingList`
+  updateShoppingList(); // Actualizamos la tabla de la lista de compras
+  calculateTotal(); // Calculamos el nuevo total de la compra
+  clearForm(); // Limpiamos los campos del formulario
 }
-  
+
+// Leer y mostrar la lista actual de compras.
+//Para seguir el codigo CRUD ==R read
+function readItems() {//Definimos funcion readitem
+  const shoppingListBody = document.getElementById("shopping-list-body");//Obtenemos una referencia al cuerpo de la tabla
+  shoppingListBody.innerHTML = ""; // Limpiamos la tabla
+  shoppingList.forEach((item, index) => {
+    //Iteramos sobre cada artículo en shoppingList
+    const row = document.createElement("tr");//Creamos una fila<tr>
+    row.innerHTML = `
+      <td>${item.name}</td>
+      <td>${item.quantity}</td>
+      <td>${item.price.toFixed(2)}</td>
+      <td>${item.total.toFixed(2)}</td>
+      <td><button onclick="deleteItem(${index})">Borrar</button></td>
+    `;//Definimos el contenido HTML de la fila
+    shoppingListBody.appendChild(row);
+  });//Añadimos la fila creada
+}
+
+//Actualizar la tabla de la lista de compras.
+
+function updateShoppingList() {
+  readItems(); // Refresca los elementos visualizados
+}
+
+//Eliminar un artículo por su índice.
+
+function deleteItem(index) { 
+  shoppingList.splice(index, 1);// Eliminamos el artículo en la posición `index` del array 
+  updateShoppingList();// Actualizamos la lista
+  calculateTotal();//funcion para calcular total
+}
+
+// Calcular el total de la lista de compras.
+
+function calculateTotal() {
+  const totalAmount = shoppingList.reduce((acc, item) => acc + item.total, 0);
+  //recorremos el array shoppinglist y acummulamos la suma en el total :reduce toma parametros acc y item y añadimos el valor al total 
+  document.getElementById("total-amount").textContent = totalAmount.toFixed(2);
+  //Actualizamos el contenido del elemento HTML
+}
+
+//Reiniciar la lista de compras.
+ 
+function resetList() {
+  shoppingList = [];//Vaciamos el array
+  updateShoppingList();//Llamamos a la función
+  calculateTotal();//Llamamos a la función calculateTotal
+}
+
+//Limpiar los campos del formulario.
+ 
+function clearForm() {
+  document.getElementById("item-name").value = "";//Vacía el campo de entrada del nombre del artículo
+  document.getElementById("cantidad").value = "";//Vacía el campo de entrada de la cantidad del artículo
+  document.getElementById("item-price").value = "";//Vacía el campo de entrada del precio del artículo
+}
+ */
