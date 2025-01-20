@@ -7,64 +7,58 @@
     <link rel="stylesheet" href="./css/styles.css"> 
     <link rel="stylesheet" href="./css/responsive-desk.css" media="screen and (max-width: 768px)">
     <link rel="stylesheet" href="./css/responsive-mobile.css" media="screen and (max-width: 480px)">
-    
 </head>
 <body>
     <section class="top-section">
-        <!-- Sección grande de arriba -->
         <h1>Lista de Compras</h1>
     </section>
     <section class="bottom-section">
-        <!-- Contenedor de las dos secciones inferiores -->
         <div class="left-section">
-            <!-- Sección izquierda (65%) -->
-             <form id="shopping-form">
-                <label for="item-name">Articulo:</label>
-                <input type="text" id="item-name" placeholder="Nombre del Articulo " required>
+            <form id="shopping-form">
+                <!-- Datalist para sugerencias de productos -->
+                <datalist id="productos"></datalist>
+                <label for="item-name">Artículo:</label>
+                <input type="text" id="item-name" placeholder="Nombre del Artículo" list="productos" required>
                 <br><br>
                 <label for="item-quantity">Cantidad:</label>
                 <input type="number" id="cantidad" placeholder="Cantidad..." required>
                 <br><br>
                 <label for="item-price">Precio:</label>
-                <input type="number" id="item-price" placeholder="Precio del Articulo " required>
+                <input type="number" id="item-price" placeholder="Precio del Artículo" required>
                 <br><br>
-                
-                
                 <div class="form-buttons">
-                    <button id="add-item" >Agregar Articulo</button>
-                    <button id="new-list" >Nueva Lista de compra</button>
+                    <button id="add-item">Agregar Artículo</button>
+                    <button id="new-list">Nueva Lista de Compra</button>
+                    <button id="historial">Historial</button>
                 </div>
             </form>
-                <!-- tabla de datos -->
-                <table class="data-table" id="data-table">
-                    <thead>
-                        <tr>
-                            <th>Artículo</th> 
-                            <th>Cantidad</th>
-                            <th>Precio</th> 
-                            <th>Total</th>
-                            <th>Borrar</th>
-                        </tr>
-                    </thead>
-                    <tbody id="shopping-list-body">
-                        <!-- Los datos añadidos aparecerán aquí -->
-                        
-                    </tbody>
-                </table>
-                <!-- El total de la compra sera inscrito en este p -->
+            <table class="data-table" id="data-table">
+                <thead>
+                    <tr>
+                        <th>Artículo</th> 
+                        <th>Cantidad</th>
+                        <th>Precio</th> 
+                        <th>Total</th>
+                        <th>Borrar</th>
+                    </tr>
+                </thead>
+                <tbody id="shopping-list-body">
+                    <!-- Los datos añadidos aparecerán aquí -->
+                </tbody>
+            </table>
+            <p>Total de la compra: $<span id="total-amount">0.00</span></p>
+            <div id="history-display"></div>
         </div>
         <div class="right-section">
-            
-                <h3>Menú de opciones</h3>
-                <ul class="menu">
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Configuración</a></li>
-                    <li><a href="#">Ayuda</a></li>
-                </ul>
-            
+            <h3>Menú de opciones</h3>
+            <ul class="menu">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Historial</a></li>
+                <li><a href="#">Configuración</a></li>
+                <li><a href="#">Ayuda</a></li>
+            </ul>
         </div>
-    </form>
-    <script src="./js/script.js"></script>
+    </section>
     <script src="./js/Script2.js"></script>
 </body>
 </html>

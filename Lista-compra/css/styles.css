@@ -47,6 +47,12 @@ body {
     min-width: 80px;
     text-align:right;
     margin-right: 10px;
+    text-decoration:1px underline #45a049;
+    transition: all 200ms ease-in-out;
+    cursor:  pointer;
+ }
+ #shopping-form label:hover{
+    text-decoration: 3px  underline #45a049 ;
  }
  #shopping-form input{
     flex:1;
@@ -54,25 +60,47 @@ body {
     border: 1px solid #ccc;
     border-radius: 4px;
  }
- .form-buttons,button {
+ .form-buttons, button {
     display: flex;
     justify-content: center;
-
     gap: 10px;
     margin-top: 10px;
     width: 100%;
- }
- .form-buttons button,button{
+}
+
+.form-buttons button, button {
     padding: 8px 15px;
-    background-color: #4CAF50;
+    background-color: #4CAF50;  
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
- }
- .form-buttons button:hover,button:hover{
-    background-color: #45a049;
- }
+    transform: scale(0.9); 
+    filter: blur(0.5px);  
+    transition: all 0.3s ease; 
+}
+
+.form-buttons button:hover, button:hover {
+    filter: blur(0px); 
+    transform: scale(1.1);  
+    background-color: #66bb6a;  
+    color: #fff;  
+    font-size: 13px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+}
+
+.form-buttons button:active, button:active {
+    transform: scale(1); 
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.form-buttons button:disabled, button:disabled {
+    background-color: #d3d3d3; 
+    color: #808080; 
+    cursor: not-allowed;
+    box-shadow: none; 
+    transform: none;
+}
 /* Sección izquierda (65%) */
 .left-section {
     flex: 65%; 
@@ -108,16 +136,33 @@ body {
     text-decoration: none;
     color: #4CAF50;
     font-weight: bold;
-    padding: 10px;
+    padding: 10px 20px;
     display: block;
     border: 1px solid #4CAF50;
     border-radius:5px;
+    border: none;
+    scale: 0.9;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .menu li a:hover{
     background-color: #4CAF50;
     color: white;
+    transform: scale(1); 
+    box-shadow: 0 8px 5px rgba(0, 0, 0, 0.2); 
 }
-
-
-
-
+.menu li a:active {
+    transform: scale(1); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.menu li a:disabled {
+    background-color: #d3d3d3; 
+    color: #808080; 
+    cursor: not-allowed;
+    box-shadow: none; 
+    transform: none;
+}

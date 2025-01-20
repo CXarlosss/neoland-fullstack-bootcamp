@@ -1,0 +1,38 @@
+[
+    {
+        "id": "leche",
+        "name": "Leche",
+        "qty": "12",
+        "price": "24"
+    },
+    {
+        "id": "carne",
+        "name": "Carne",
+        "qty": "1",
+        "price": "12"
+    },
+    {
+        "id": "pescado",
+        "name": "pescado",
+        "qty": "1",
+        "price": "2"
+    },
+    {
+        "id": "verduras",
+        "name": "verduras",
+        "qty": "1",
+        "price": "12"
+    },
+    {
+        "id": "cereales",
+        "name": "cereales",
+        "qty": "1",
+        "price": "4"
+    },
+    {
+        "id": "yogures",
+        "name": "yogures",
+        "qty": "12",
+        "price": "21"
+    }
+]
