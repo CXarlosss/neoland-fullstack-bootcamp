@@ -31,6 +31,7 @@
 
 // Inicializamos la lista de co mpra como un array vacío
 let shoppingList = [];
+let lastSearch = null;//Ultima busqueda para almacenar 
 
 // Referencias a elementos del DOM para interactuar con ellos
 const itemNameInput = document.getElementById("item-name"); // Campo de texto para el nombre del artículo
@@ -40,7 +41,8 @@ const itemButton = document.getElementById("add-item"); // Botón para añadir u
 const newListButton = document.getElementById("new-list"); // Botón para reiniciar la lista de compras
 const shoppingListBody = document.getElementById("shopping-list-body"); // Cuerpo de la tabla donde se mostrarán los artículos
 const totalAmountDisplay = document.getElementById("total-amount"); // Elemento donde se muestra el total de la compra
-
+const historyLink = document.getElementById("historial");//Enlace para mostrar histial
+const historyDisplay = document.getElementById("history-display")//Contenedor para mostrar historial 
 // Esperamos a que el DOM esté completamente cargado antes de ejecutar el código
 document.addEventListener("DOMContentLoaded", () => {
   // Añadimos un evento al botón "Agregar Artículo"
@@ -71,6 +73,16 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("Por favor, ingresa todos los campos correctamente");
     }
   }); // Fin del evento del botón "Agregar Artículo"
+  // Evento del enlace "Historial" para mostrar la última búsqueda
+  historyLink.addEventListener("click", function(event){
+    event.preventDefault();//Evita que el enlace recargue la pagina
+    const message = lastSearch
+    ? `Última búsqueda: ${lastSearch.name}, Cantidad: ${lastSearch.quantity}, Precio: ${lastSearch.price.toFixed(2)}, Total: ${lastSearch.total.toFixed(2)}`
+      : "No hay búsquedas recientes.";
+      const historyLine = document.createElement("p");
+      historyLine.textContent = message;
+      historyDisplay.appendChild(historyLine);
+  })
 }); // Fin del evento DOMContentLoaded
 
 // Función para eliminar un artículo de la lista
