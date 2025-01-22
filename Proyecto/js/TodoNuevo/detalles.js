@@ -1,5 +1,6 @@
 import { fetchApiData } from "./api";
 
+
 async function mostrarDetallesProducto(id) {
     const data = await fetchApiData();
     const producto = data.find(item => item.id === id);

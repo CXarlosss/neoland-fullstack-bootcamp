@@ -1,0 +1,102 @@
+{
+    "1": {
+        "nombre": "Clase de Yoga",
+        "descripcion": "Clases de Yoga individualizadas para todos los niveles",
+        "ubicacion": "Avenida de la Paz, 123",
+        "precio": "15€ por clase",
+        "valoracion": "★★★★★",
+        "horarios": "Lunes a Viernes de 10:00 a 18:00",
+        "categoria": "Actividad",
+        "metodoPago": "Efectivo, Tarjeta"
+    },
+    "2": {
+        "nombre": "Carnicería Los Tres",
+        "descripcion": "Carnes frescas de calidad, producidas localmente.",
+        "ubicacion": "Calle de la Libertad, 45",
+        "precio": "Precio por kilogramo: 5€",
+        "valoracion": "★★★★☆",
+        "horarios": "Lunes a Sábado de 08:00 a 14:00",
+        "categoria": "Comercio",
+        "metodoPago": "Efectivo, Tarjeta"
+    },
+    "3": {
+        "nombre": "Crosfit",
+        "descripcion": "Clases de Crosfit de forma individual o grupal.",
+        "ubicacion": "Calle del Sol, 67",
+        "precio": "Precio por clase 20€",
+        "valoracion": "★★★★☆",
+        "horarios": "Lunes a Sábado de 08:00 a 20:00",
+        "categoria": "Actividad",
+        "metodoPago": "Efectivo, Tarjeta"
+    },
+    "4": {
+        "nombre": "Frutería el Valle",
+        "descripcion": "Frutería local de productos locales",
+        "ubicacion": "Avenida de la Paz, 123",
+        "precio": "Precio por kilogramo: 4€",
+        "valoracion": "★★★★☆",
+        "horarios": "Lunes a Sábado de 08:00 a 14:00",
+        "categoria": "Comercio",
+        "metodoPago": "Efectivo, Tarjeta"
+    },
+    "5": {
+        "nombre": "Spa Relax",
+        "descripcion": "Sesiones de spa y masajes terapéuticos.",
+        "ubicacion": "Calle Primavera, 10",
+        "precio": "40€ por sesión",
+        "valoracion": "★★★★★",
+        "horarios": "Lunes a Domingo de 09:00 a 21:00",
+        "categoria": "Actividad",
+        "metodoPago": "Efectivo, Tarjeta"
+    },
+    "6": {
+        "nombre": "Tienda Vegana Verde",
+        "descripcion": "Productos ecológicos y veganos certificados.",
+        "ubicacion": "Calle Esperanza, 22",
+        "precio": "Precios variables según producto",
+        "valoracion": "★★★★☆",
+        "horarios": "Lunes a Viernes de 10:00 a 18:00",
+        "categoria": "Comercio",
+        "metodoPago": "Efectivo, Tarjeta"
+    },
+    "7": {
+        "nombre": "Clínica de Fisioterapia Vital",
+        "descripcion": "Tratamientos personalizados para lesiones y bienestar físico.",
+        "ubicacion": "Avenida Central, 89",
+        "precio": "50€ por sesión",
+        "valoracion": "★★★★★",
+        "horarios": "Lunes a Sábado de 08:00 a 20:00",
+        "categoria": "Actividad",
+        "metodoPago": "Efectivo, Tarjeta"
+    },
+    "8": {
+        "nombre": "Panadería La Espiga",
+        "descripcion": "Pan artesanal y repostería fresca cada día.",
+        "ubicacion": "Calle Dulce, 15",
+        "precio": "Desde 2€ por pieza",
+        "valoracion": "★★★★★",
+        "horarios": "Lunes a Domingo de 07:00 a 15:00",
+        "categoria": "Comercio",
+        "metodoPago": "Efectivo, Tarjeta"
+    },
+    "9": {
+        "nombre": "Club de Senderismo",
+        "descripcion": "Excursiones guiadas por rutas naturales.",
+        "ubicacion": "Punto de encuentro: Plaza Mayor",
+        "precio": "20€ por excursión",
+        "valoracion": "★★★★☆",
+        "horarios": "Sábados y Domingos de 08:00 a 14:00",
+        "categoria": "Actividad",
+        "metodoPago": "Efectivo, Tarjeta"
+    },
+    "10": {
+        "nombre": "Pescadería El Mar",
+        "descripcion": "Pescado fresco traído directamente de la lonja.",
+        "ubicacion": "Calle del Puerto, 18",
+        "precio": "Precio por kilogramo: 8€",
+        "valoracion": "★★★★☆",
+        "horarios": "Martes a Sábado de 09:00 a 14:00",
+        "categoria": "Comercio",
+        "metodoPago": "Efectivo, Tarjeta"
+    }
+}

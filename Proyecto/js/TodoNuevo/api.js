@@ -1,7 +1,7 @@
 //Gestionaremos la API para hacer las llamadas
 async function fetchApiData() {
     try{
-        const response = await fetch('Api.json')
+        const response = await fetch('.\TodoNuevo\Api.json')
         const data = await response.json();
         return data;
     }catch(error){
